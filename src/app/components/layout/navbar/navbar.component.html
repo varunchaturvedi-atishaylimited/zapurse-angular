@@ -33,9 +33,9 @@
                     </div>
                 </div>
                 } @else {
-                <a [routerLink]="link.path" routerLinkActive="text-primary font-semibold"
-                    [routerLinkActiveOptions]="{exact: true}"
+                <a [routerLink]="link.path" routerLinkActive="text-primary" [routerLinkActiveOptions]="{ exact: true }"
                     class="font-medium text-black dark:text-white hover:text-primary transition-colors whitespace-nowrap">
+
                     {{ link.name }}
                 </a>
                 }
