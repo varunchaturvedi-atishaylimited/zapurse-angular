@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule, Smartphone, Banknote, ArrowUpRight } from 'lucide-angular';
+import { ParticlesComponent } from '../../ui/particles/particles.component';
 
 @Component({
   selector: 'app-services-grid',
   standalone: true,
-  imports: [LucideAngularModule, RouterLink],
+  imports: [LucideAngularModule, RouterLink, ParticlesComponent],
   templateUrl: './services-grid.component.html',
   styleUrl: './services-grid.component.css'
 })

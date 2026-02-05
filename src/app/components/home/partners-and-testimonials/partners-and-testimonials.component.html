@@ -1,5 +1,7 @@
 <section class="py-20 relative bg-transparent">
-    <div class="container mx-auto px-4 md:px-6">
+    <app-particles className="absolute inset-0 z-0" [quantity]="100" [ease]="80" color="#cbd5e1"
+        [refresh]="true"></app-particles>
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
 
         <!-- Partners Auto-scroll -->
         <div class="mb-24 text-center overflow-hidden">
@@ -33,7 +35,7 @@
                     <div class="flex gap-1 mb-6">
                         @for (star of [1,2,3,4,5]; track star) {
                         <lucide-icon [img]="Star" [size]="18" class="transition-colors" [ngClass]="{
-                                        'fill-yellow-400 text-yellow-400': star <= t.rating,
+                                        'fill-yellow-500 text-yellow-500': star <= t.rating,
                                         'text-white/20': star > t.rating
                                     }"></lucide-icon>
                         }

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule, Star } from 'lucide-angular';
 import { CommonModule } from '@angular/common';
+import { ParticlesComponent } from '../../ui/particles/particles.component';
 
 @Component({
   selector: 'app-partners-and-testimonials',
   standalone: true,
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule, LucideAngularModule, ParticlesComponent],
   templateUrl: './partners-and-testimonials.component.html',
   styleUrl: './partners-and-testimonials.component.css'
 })

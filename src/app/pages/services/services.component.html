@@ -44,15 +44,56 @@
                 </div>
 
                 <div class="p-6 border-t border-gray-50 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/50">
-                    <a routerLink="/contact"
+                    <div (click)="openVideoModal(service.videoSrc)"
                         class="flex items-center justify-between font-semibold text-gray-700 dark:text-gray-200 hover:text-primary transition-colors group cursor-pointer">
-                        <span>Start Offering This</span>
+                        <span>Recharge under 20 seconds</span>
                         <lucide-icon [img]="ArrowRight" [size]="18"
                             class="group-hover:translate-x-1 transition-transform"></lucide-icon>
-                    </a>
+                    </div>
                 </div>
             </div>
             }
         </div>
+
+        <!-- App Store Buttons and QR Codes Section (shown once after all cards) -->
+        <div
+            class="max-w-4xl mx-auto mt-16 p-8 rounded-3xl bg-white/30 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-lg">
+            <h3 class="text-2xl font-bold text-center mb-8">Download Our App</h3>
+
+            <div class="flex flex-col gap-8">
+                <!-- Store Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://play.google.com/store/apps/details?id=com.zapurse.zapurse&hl=en" target="_blank"
+                        rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                            alt="Get it on Google Play" class="h-14" />
+                    </a>
+
+                    <a href="https://apps.apple.com/in/app/zapurse-recharge/id6751755861" target="_blank"
+                        rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                            alt="Download on the App Store" class="h-14" />
+                    </a>
+                </div>
+
+                <!-- QR Codes -->
+                <div class="flex flex-row gap-8 justify-center items-center">
+                    <div class="text-center">
+                        <img src="assets/zapurse play store QR code.png" alt="Play Store QR Code"
+                            class="w-24 h-24 rounded-lg mx-auto" />
+                        <p class="text-sm mt-3 font-semibold text-gray-700 dark:text-gray-300">Play Store</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/zapurse app store QR code.png" alt="App Store QR Code"
+                            class="w-24 h-24 rounded-lg mx-auto" />
+                        <p class="text-sm mt-3 font-semibold text-gray-700 dark:text-gray-300">App Store</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Video Modal -->
+    <app-video-modal [videoSrc]="currentVideoSrc" [isOpen]="showVideoModal"
+        (close)="closeVideoModal()"></app-video-modal>
 </div>

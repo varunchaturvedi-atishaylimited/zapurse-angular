@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule, Facebook, Instagram, Linkedin } from 'lucide-angular';
 import { DatePipe } from '@angular/common';
+import { ParticlesComponent } from '../../ui/particles/particles.component';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink, LucideAngularModule, DatePipe],
+  imports: [RouterLink, LucideAngularModule, DatePipe, ParticlesComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })

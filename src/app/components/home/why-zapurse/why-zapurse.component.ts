@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule, ShieldCheck, Zap, Users, CheckCircle2 } from 'lucide-angular';
+import { ParticlesComponent } from '../../ui/particles/particles.component';
 
 @Component({
   selector: 'app-why-zapurse',
   standalone: true,
-  imports: [LucideAngularModule],
+  imports: [LucideAngularModule, ParticlesComponent],
   templateUrl: './why-zapurse.component.html',
   styleUrl: './why-zapurse.component.css'
 })

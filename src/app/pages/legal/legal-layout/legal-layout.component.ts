@@ -1,11 +1,12 @@
 import { Component, Input, AfterViewInit, ElementRef, ViewChild, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { gsap } from 'gsap';
+import { ParticlesComponent } from '../../../components/ui/particles/particles.component';
 
 @Component({
   selector: 'app-legal-layout',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ParticlesComponent],
   templateUrl: './legal-layout.component.html',
   styleUrl: './legal-layout.component.css'
 })

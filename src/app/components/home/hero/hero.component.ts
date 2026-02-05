@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, ElementRef, ViewChild, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { InteractiveGridPatternComponent } from '../../ui/interactive-grid-pattern/interactive-grid-pattern.component';
 import { gsap } from 'gsap';
+import { InteractiveGridPatternComponent } from '../../ui/interactive-grid-pattern/interactive-grid-pattern.component';
 
 @Component({
   selector: 'app-hero',

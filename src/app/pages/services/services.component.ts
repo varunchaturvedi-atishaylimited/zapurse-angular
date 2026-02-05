@@ -3,16 +3,19 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule, Smartphone, Monitor, ArrowRight } from 'lucide-angular';
 import { ParticlesComponent } from '../../components/ui/particles/particles.component';
+import { VideoModalComponent } from '../../components/ui/video-modal/video-modal.component';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CommonModule, RouterLink, LucideAngularModule, ParticlesComponent],
+  imports: [CommonModule, RouterLink, LucideAngularModule, ParticlesComponent, VideoModalComponent],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
 export class ServicesComponent {
   readonly ArrowRight = ArrowRight;
+  showVideoModal = false;
+  currentVideoSrc = '';
 
   services = [
     {
@@ -22,6 +25,7 @@ export class ServicesComponent {
       features: ['99.9% uptime', 'Covers all operators', 'Instant confirmation'],
       icon: Smartphone,
       color: 'bg-[#217095]',
+      videoSrc: 'assets/Phone Recharge Video.mp4'
     },
     {
       id: 'dth',
@@ -30,6 +34,16 @@ export class ServicesComponent {
       features: ['All providers supported', 'Instant activation', 'Best commissions'],
       icon: Monitor,
       color: 'bg-[#738233]',
+      videoSrc: 'assets/DTH Recharge Video.mp4'
     },
   ];
+
+  openVideoModal(videoSrc: string) {
+    this.currentVideoSrc = videoSrc;
+    this.showVideoModal = true;
+  }
+
+  closeVideoModal() {
+    this.showVideoModal = false;
+  }
 }
