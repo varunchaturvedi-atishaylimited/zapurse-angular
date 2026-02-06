@@ -42,15 +42,7 @@ export class NavbarComponent {
 
   navLinks: NavLink[] = [
     { name: 'Home', path: '/' },
-    {
-      name: 'Services',
-      path: '/services',
-      isDropdown: true,
-      items: [
-        { name: 'Mobile Recharge', path: '/services', fragment: 'recharge' },
-        { name: 'DTH Recharge', path: '/services', fragment: 'dth' },
-      ],
-    },
+    { name: 'Services', path: '/services' },
     {
       name: 'Zapurse Policies',
       path: '#',

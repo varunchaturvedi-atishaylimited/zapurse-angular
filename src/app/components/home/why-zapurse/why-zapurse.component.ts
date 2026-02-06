@@ -10,26 +10,29 @@ import { ParticlesComponent } from '../../ui/particles/particles.component';
   styleUrl: './why-zapurse.component.css'
 })
 export class WhyZapurseComponent {
+
+  // 
+
   features = [
+    {
+      icon: CheckCircle2,
+      title: "Zero Platform Fees",
+      description: "Why pay extra for recharges? While other apps charge ₹3–₹5 as a convenience fee, we charge zero."
+    },
     {
       icon: ShieldCheck,
       title: "Trusted & Secure",
       description: "Latest security protocols ensuring 100% safe transactions for you and your customers."
     },
     {
+      icon: Users,
+      title: "First-Time User Discount",
+      description: "Get an instant ₹11 off on your very first recharge—no conditions, no hidden charges."
+    },
+    {
       icon: Zap,
       title: "Lightning Fast",
       description: "Industry-leading success rates with instant processing for recharges."
-    },
-    {
-      icon: Users,
-      title: "Nationwide Network",
-      description: "Join a growing family of 50,000+ happy retailers and distributors across India."
-    },
-    {
-      icon: CheckCircle2,
-      title: "Best Commissions",
-      description: "Maximize your earnings with the most competitive commission structures in the market."
     }
   ];
 }

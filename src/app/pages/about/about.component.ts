@@ -20,10 +20,10 @@ export class AboutComponent {
   readonly MapPin = MapPin;
 
   stats = [
-    { label: "Retail Partners", value: 50000, suffix: "+" },
-    { label: "Distributors", value: 500, suffix: "+" },
-    { label: "States Covered", value: 20, suffix: "+" },
-    { label: "Daily Transactions", value: 1, suffix: "M+" }, // Note: Ticker handles numbers, suffix is separate
+    { label: "Trusted by Customers", value: 1000, suffix: "+" },
+    { label: "States Covered", value: 22, suffix: "+" },
+    { label: "Monthly Transactions", value: 3500, suffix: "+" }, // Note: Ticker handles numbers, suffix is separate
+    { label: "Trusted Operators", value: 20, suffix: "+" },
   ];
 
   // Need to handle "1M+" correctly if value is just 1. The suffix works.
