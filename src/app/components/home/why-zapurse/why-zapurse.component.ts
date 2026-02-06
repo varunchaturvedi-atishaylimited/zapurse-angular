@@ -31,8 +31,8 @@ export class WhyZapurseComponent {
     },
     {
       icon: Zap,
-      title: "Lightning Fast",
-      description: "Industry-leading success rates with instant processing for recharges."
+      title: "DTH Recharge",
+      description: "Get 2.5% off on every DTH Recharge with Zapurse and get GST invoice for every transaction."
     }
   ];
 }
