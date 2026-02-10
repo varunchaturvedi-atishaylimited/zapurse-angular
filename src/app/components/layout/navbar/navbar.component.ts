@@ -1,6 +1,6 @@
 import { Component, HostListener, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { LucideAngularModule, Menu, X, ChevronDown, Phone } from 'lucide-angular';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
@@ -31,6 +31,8 @@ interface NavLink {
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  constructor(private router: Router) { }
+
   isScrolled = signal(false);
   mobileMenuOpen = signal(false);
   openDropdown = signal<string | null>(null);
@@ -78,5 +80,12 @@ export class NavbarComponent {
 
   toggleDropdown(name: string) {
     this.openDropdown.update(current => current === name ? null : name);
+  }
+
+  onLogoClick(event: MouseEvent) {
+    if (this.router.url === '/' || this.router.url === '/#') {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }
 }
