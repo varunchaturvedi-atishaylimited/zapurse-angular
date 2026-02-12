@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* -------------------------------
    Base Variables & Theme Colors
 ---------------------------------*/
@@ -13,6 +17,8 @@
 
         --primary: 231 82% 16%;
         --secondary: 142 71% 58%;
+
+        --font-main: 'Manrope', Arial, Helvetica, sans-serif;
     }
 
     .dark {
@@ -26,7 +32,8 @@
     }
 
     body {
-        @apply bg-background text-foreground font-sans antialiased;
+        @apply bg-background text-foreground antialiased;
+        font-family: var(--font-main);
         font-feature-settings: "kern", "liga";
     }
 
@@ -48,6 +55,7 @@
     h5,
     h6 {
         @apply text-transparent bg-clip-text font-black tracking-tighter;
+        font-family: var(--font-main);
 
         /* Light mode gradient */
         background-image: linear-gradient(to right, #080F4A, #182B0C);
@@ -92,11 +100,20 @@
 
     /* All <p> elements */
     p {
-        font-size: 20px;
+        font-family: 'Manrope', Arial, Helvetica, sans-serif;
+        font-size: 17px;
         color: #000000;
     }
 
     .dark p {
         color: #D1D5DB;
+    }
+
+    /* Navbar links & Hero section heading font */
+    nav a,
+    nav span,
+    nav button,
+    .hero-text-child {
+        font-family: 'Manrope', Arial, Helvetica, sans-serif !important;
     }
 }

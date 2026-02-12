@@ -17,7 +17,7 @@
             <div class="relative group">
                 @if (link.isDropdown) {
                 <div
-                    class="flex items-center gap-1 cursor-pointer py-2 font-medium text-black dark:text-white hover:text-primary transition-colors">
+                    class="text-lg flex items-center gap-1 cursor-pointer py-2 font-medium text-black dark:text-white hover:text-primary transition-colors">
                     <span class="whitespace-nowrap">{{ link.name }}</span>
                     <lucide-icon [img]="ChevronDown" [size]="14"></lucide-icon>
 
@@ -35,7 +35,7 @@
                 </div>
                 } @else {
                 <a [routerLink]="link.path" routerLinkActive="text-primary" [routerLinkActiveOptions]="{ exact: true }"
-                    class="font-medium text-black dark:text-white hover:text-primary transition-colors whitespace-nowrap">
+                    class="text-lg text-black dark:text-white hover:text-primary transition-colors whitespace-nowrap">
 
                     {{ link.name }}
                 </a>
